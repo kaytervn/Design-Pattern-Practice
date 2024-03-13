@@ -1,5 +1,5 @@
 package factorypattern;
-public interface Shape {
-   void draw();
-}
 
+public interface Shape {
+	void draw();
+}

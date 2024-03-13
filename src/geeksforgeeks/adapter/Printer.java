@@ -2,5 +2,5 @@ package geeksforgeeks.adapter;
 
 // Target Interface
 interface Printer {
-    void print();
+	void print();
 }

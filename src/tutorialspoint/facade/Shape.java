@@ -1,5 +1,5 @@
 package tutorialspoint.facade;
 
 public interface Shape {
-   void draw();
+	void draw();
 }

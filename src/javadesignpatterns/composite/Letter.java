@@ -1,16 +1,15 @@
 package javadesignpatterns.composite;
 
-
 public class Letter extends LetterComposite {
 
-  private final char character;
+	private final char character;
 
-  public Letter(char c) {
-    this.character = c;
-  }
+	public Letter(char c) {
+		this.character = c;
+	}
 
-  @Override
-  protected void printThisBefore() {
-    System.out.print(character);
-  }
+	@Override
+	protected void printThisBefore() {
+		System.out.print(character);
+	}
 }
