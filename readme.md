@@ -1,7 +1,7 @@
 |                | Design Pattern                                                                      |
 | :------------- | :---------------------------------------------------------------------------------- |
 | **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC |
-| **Structural** | Adapter, Facade, Composite, Decorator, Bridge                                       |
+| **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                |
 | **Behavioral** |                                                                                     |
 
 <h1 align="center">Creational</h1>
