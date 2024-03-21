@@ -13,18 +13,18 @@ import javax.swing.JPanel;
 
 import com.journaldev.design.flyweight.ShapeFactory.ShapeType;
 
-public class DrawingClient extends JFrame{
+public class DrawingClient extends JFrame {
 
 	private static final long serialVersionUID = -1350200437285282550L;
 	private final int WIDTH;
 	private final int HEIGHT;
 
-	private static final ShapeType shapes[] = { ShapeType.LINE, ShapeType.OVAL_FILL,ShapeType.OVAL_NOFILL };
+	private static final ShapeType shapes[] = { ShapeType.LINE, ShapeType.OVAL_FILL, ShapeType.OVAL_NOFILL };
 	private static final Color colors[] = { Color.RED, Color.GREEN, Color.YELLOW };
-	
-	public DrawingClient(int width, int height){
-		this.WIDTH=width;
-		this.HEIGHT=height;
+
+	public DrawingClient(int width, int height) {
+		this.WIDTH = width;
+		this.HEIGHT = height;
 		Container contentPane = getContentPane();
 
 		JButton startButton = new JButton("Draw");
@@ -41,13 +41,12 @@ public class DrawingClient extends JFrame{
 				Graphics g = panel.getGraphics();
 				for (int i = 0; i < 20; ++i) {
 					Shape shape = ShapeFactory.getShape(getRandomShape());
-					shape.draw(g, getRandomX(), getRandomY(), getRandomWidth(),
-							getRandomHeight(), getRandomColor());
+					shape.draw(g, getRandomX(), getRandomY(), getRandomWidth(), getRandomHeight(), getRandomColor());
 				}
 			}
 		});
 	}
-	
+
 	private ShapeType getRandomShape() {
 		return shapes[(int) (Math.random() * shapes.length)];
 	}
@@ -73,6 +72,6 @@ public class DrawingClient extends JFrame{
 	}
 
 	public static void main(String[] args) {
-		DrawingClient drawing = new DrawingClient(500,600);
+		DrawingClient drawing = new DrawingClient(500, 600);
 	}
 }
