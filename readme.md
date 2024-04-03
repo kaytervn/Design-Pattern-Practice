@@ -2,7 +2,7 @@
 | :------------- | :---------------------------------------------------------------------------------- |
 | **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC |
 | **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                |
-| **Behavioral** |                                                                                     |
+| **Behavioral** | Template, Observer                                                                  |
 
 <h1 align="center">Creational</h1>
 
@@ -125,3 +125,14 @@ Factoy Method gồm lớp `interface` chung và các sub class implement interfa
 <i><b>Proxy</b> provides an object that acts as a substitute for a real service object used by a client. A proxy receives client requests, does some work (access control, caching, etc.) and then passes the request to a service object.</i>
 
 ![](https://refactoring.guru/images/patterns/diagrams/proxy/structure.png?id=f2478a82a84e1a1e512a8414bf1abd1c)
+
+<h1 align="center">Behavioral</h1>
+<h2>Template</h2>
+<i><b>Template</b> defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/template-method/structure.png?id=924692f994bff6578d8408d90f6fc459)
+
+<h2>Observer</h2>
+<i><b>Observer</b> define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/observer/structure.png?id=365b7e2b8fbecc8948f34b9f8f16f33c)
