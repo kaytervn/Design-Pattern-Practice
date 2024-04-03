@@ -104,7 +104,7 @@ Factoy Method gồm lớp `interface` chung và các sub class implement interfa
 <h2>Composite</h2>
 <i><b>Composite</b> allows composing objects into a tree-like structure and work with the it as if it was a singular object.</i>
 
-![](https://gpcoder.com/wp-content/uploads/2018/11/design-patterns-composite-diagram.png)
+![](composite.png)
 
 <h2>Decorator</h2>
 <i><b>Decorator</b> allows adding new behaviors to objects dynamically by placing them inside special wrapper objects, called decorators.</i>
