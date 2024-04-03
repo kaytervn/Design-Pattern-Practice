@@ -48,107 +48,36 @@
 ApplicationContext context = new ClassPathXmlApplicationContext("application_context.xml");
 ```
 
----
-
-Example:
-
-```java
-public interface PersonService {
-    String getPersonName();
-}
-
-public class PersonServiceImpl implements PersonService {
-    @Override
-    public String getPersonName() {
-        return "John Doe";
-    }
-}
-
-public class PersonInfo {
-    private PersonService personService;
-
-    public PersonInfo(PersonService personService) {
-        this.personService = personService;
-    }
-
-    public void displayPersonInfo() {
-        String personName = personService.getPersonName();
-        System.out.println("Person name: " + personName);
-    }
-}
-
-PersonService personService = new PersonServiceImpl();
-
-PersonInfo personInfo = new PersonInfo(personService);
-
-personInfo.displayPersonInfo();
-```
-
 <h2>Singleton</h2>
 <i><b>Singleton</b> ensure that a class has only one instance, while providing a global access point to this instance.</i>
 
-```java
-public class Singleton {
+<br>
 
-    private static Singleton instance;
+**Eager Init:** Khởi tạo một `instance` ngay khi vừa được gọi tới.
 
-    private Singleton() {
-    }
-
-    public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
-        }
-        return instance;
-    }
-}
-```
+**Lazy Init:** Chỉ khởi tạo khi tạo khi gọi phương thức `getInstance()` (Chỉ phù hợp với single-thread). Nếu ở môi trường multi-thread, phải thêm `synchronized` vào phương thức `getInstance()`.
 
 <h2>Factory</h2>
 <i><b>Factory</b> provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.</i>
 
-```java
-public interface Shape {
-    void draw();
-}
+<br>
 
-public class Circle implements Shape {
-    @Override
-    public void draw() {
-        System.out.println("Draw a Circle");
-    }
-}
-
-public class Rectangle implements Shape {
-    @Override
-    public void draw() {
-        System.out.println("Draw a Rectangle");
-    }
-}
-
-public class ShapeFactory {
-    public Shape getShape(String shapeType) {
-        if (shapeType.equals("circle")) {
-            return new Circle();
-        } else if (shapeType.equals("rectangle")) {
-            return new Rectangle();
-        } else {
-            return null;
-        }
-    }
-}
-
-ShapeFactory factory = new ShapeFactory();
-
-Shape circle = factory.getShape("circle");
-circle.draw();
-
-Shape rectangle = factory.getShape("rectangle");
-rectangle.draw();
-```
+Factoy Method gồm lớp `interface` chung và các sub class implement interface đó, và lớp `factory` chịu tránh nhiệm khởi tạo các đối tượng sub class dựa theo tham số đầu vào (lớp này là `Singleton` hoặc có các phương thức khai báo ở `public static`).
 
 <h2>Abstract Factory</h2>
 <i><b>Abstract Factory</b> creates entire product families without specifying their concrete classes.</i>
+
+<br>
+
+**AbstractFactory:** Khai báo dạng interface hoặc abstract class chứa các phương thức để tạo ra các đối tượng abstract product.
+
+**ConcreteFactory:** Xây dựng, cài đặt các phương thức tạo các đối tượng cụ thể.
+
+**AbstractProduct:** Khai báo dạng interface hoặc abstract class để định nghĩa đối tượng abstract.
+
+**Product:** Cài đặt của các đối tượng cụ thể, cài đặt các phương thức được quy định tại AbstractProduct.
+
+**Client:** là đối tượng sử dụng AbstractFactory và các AbstractProduct.
 
 ```java
 public interface AbstractFactory {
