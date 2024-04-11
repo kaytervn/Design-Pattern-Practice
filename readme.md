@@ -1,8 +1,8 @@
-|                | Design Pattern                                                                      |
-| :------------- | :---------------------------------------------------------------------------------- |
-| **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC |
-| **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                |
-| **Behavioral** | Template, Observer                                                                  |
+|                | Design Pattern                                                                                                           |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC                                      |
+| **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                                                     |
+| **Behavioral** | Template, Observer, Mediator, State, Strategy, Chain of Responsibility, Visitor, Memento, Iterator, Interpreter, Command |
 
 <h1 align="center">Creational</h1>
 
@@ -51,20 +51,10 @@ ApplicationContext context = new ClassPathXmlApplicationContext("application_con
 <h2>Singleton</h2>
 <i><b>Singleton</b> ensure that a class has only one instance, while providing a global access point to this instance.</i>
 
-<br>
-
-**Eager Init:** Khởi tạo một `instance` ngay khi vừa được gọi tới.
-
-**Lazy Init:** Chỉ khởi tạo khi tạo khi gọi phương thức `getInstance()` (Chỉ phù hợp với single-thread). Nếu ở môi trường multi-thread, phải thêm `synchronized` vào phương thức `getInstance()`.
-
 ![](https://refactoring.guru/images/patterns/diagrams/singleton/structure-en.png?id=4e4306d3a90f40d74c7a4d2d2506b8ec)
 
 <h2>Factory</h2>
 <i><b>Factory</b> provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.</i>
-
-<br>
-
-Factoy Method gồm lớp `interface` chung và các sub class implement interface đó, và lớp `factory` chịu tránh nhiệm khởi tạo các đối tượng sub class dựa theo tham số đầu vào (lớp này là `Singleton` hoặc có các phương thức khai báo ở `public static`).
 
 ![](https://refactoring.guru/images/patterns/diagrams/factory-method/structure.png?id=4cba0803f42517cfe8548c9bc7dc4c9b)
 
