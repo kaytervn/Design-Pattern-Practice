@@ -126,3 +126,43 @@ ApplicationContext context = new ClassPathXmlApplicationContext("application_con
 <i><b>Observer</b> define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.</i>
 
 ![](https://refactoring.guru/images/patterns/diagrams/observer/structure.png?id=365b7e2b8fbecc8948f34b9f8f16f33c)
+
+<h2>Mediator</h2>
+<i><b>Mediator</b> reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/mediator/structure.png)
+
+<h2>State</h2>
+<i><b>State</b> lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/state/structure-en.png)
+
+<h2>Strategy</h2>
+<i><b>Strategy</b> defines a family of algorithms, put each of them into a separate class, and make their objects interchangeable.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png)
+
+<h2>Chain of Responsibility</h2>
+<i><b>Chain of Responsibility</b> pases requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/structure.png)
+
+<h2>Visitor</h2>
+<i><b>Visitor</b> separates algorithms from the objects on which they operate.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/visitor/structure-en.png)
+
+<h2>Memento</h2>
+<i><b>Memento</b> saves and restores the previous state of an object without revealing the details of its implementation.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/memento/structure1.png)
+
+<h2>Iterator</h2>
+<i><b>Iterator</b> allows sequential traversal through a complex data structure without exposing its internal details.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/iterator/structure.png)
+
+<h2>Command</h2>
+<i><b>Command</b> turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request’s execution, and support undoable operations.</i>
+
+![](https://refactoring.guru/images/patterns/diagrams/command/structure.png)
