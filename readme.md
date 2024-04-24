@@ -1,8 +1,8 @@
-|                | Design Pattern                                                                                                                                     |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC                                                                |
-| **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                                                                               |
-| **Behavioral** | Template, Observer, Mediator, State, Strategy, Chain of Responsibility, Visitor, Memento, Iterator, Interpreter, Command, Interpreter, Null Object |
+|                | Design Pattern                                                                                                                        |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| **Creational** | Singleton, Factory, Abstract Factory, Prototype, Builder, Dependency Injection, MVC                                                   |
+| **Structural** | Adapter, Facade, Composite, Decorator, Bridge, Flyweight, Proxy, DAO                                                                  |
+| **Behavioral** | Template, Observer, Mediator, State, Strategy, Chain of Responsibility, Visitor, Memento, Iterator, Interpreter, Command, Null Object |
 
 <h1 align="center">Creational</h1>
 
